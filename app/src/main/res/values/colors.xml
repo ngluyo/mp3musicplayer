@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palet Warna Utama (Tema Gelap) -->
+    <color name="md_theme_primary">#FFADC6FF</color>
+    <color name="md_theme_onPrimary">#FF002F64</color>
+    <color name="md_theme_primaryContainer">#FF00458d</color>
+    <color name="md_theme_onPrimaryContainer">#FFD8E2FF</color>
+
+    <color name="md_theme_secondary">#FFBDC7DC</color>
+    <color name="md_theme_onSecondary">#FF283141</color>
+    <color name="md_theme_secondaryContainer">#FF3E4759</color>
+    <color name="md_theme_onSecondaryContainer">#FFDAE2F9</color>
+
+    <color name="md_theme_tertiary">#FFDBBDE0</color>
+    <color name="md_theme_onTertiary">#FF402845</color>
+    <color name="md_theme_tertiaryContainer">#FF583E5D</color>
+    <color name="md_theme_onTertiaryContainer">#FFf8d8fd</color>
+
+    <color name="md_theme_error">#FFFFB4AB</color>
+    <color name="md_theme_onError">#FF690005</color>
+    <color name="md_theme_errorContainer">#FF93000A</color>
+    <color name="md_theme_onErrorContainer">#FFFFDAD6</color>
+
+    <color name="md_theme_background">#FF1A1C1E</color>
+    <color name="md_theme_onBackground">#FFE2E2E6</color>
+
+    <color name="md_theme_surface">#FF1A1C1E</color>
+    <color name="md_theme_onSurface">#FFE2E2E6</color>
+
+    <color name="md_theme_surfaceVariant">#FF43474E</color>
+    <color name="md_theme_onSurfaceVariant">#FFC3C7CF</color>
+
+    <color name="md_theme_outline">#FF8D9199</color>
+    <color name="md_theme_inverseSurface">#FFE2E2E6</color>
+    <color name="md_theme_inverseOnSurface">#FF2F3033</color>
+    <color name="md_theme_inversePrimary">#FF225FA6</color>
+
+    <!-- Warna Kustom Tambahan -->
+    <color name="icon_button_tint_disabled">#40E2E2E6</color> <!-- Teks/Ikon dengan transparansi 25% -->
+    <color name="delete_red">#FFCF6679</color>
+</resources>

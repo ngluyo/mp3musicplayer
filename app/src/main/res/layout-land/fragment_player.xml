@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".PlayerFragment">
+
+    <!-- Kontrol Bawah: Satu baris tombol besar -->
+    <LinearLayout
+        android:id="@+id/layout_main_controls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_shuffle"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_shuffle_button"
+            android:src="@drawable/ic_shuffle" />
+
+        <ImageButton
+            android:id="@+id/button_previous"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_previous_button"
+            android:src="@drawable/ic_skip_previous" />
+
+        <ImageButton
+            android:id="@+id/button_play_pause"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1.2"
+            android:contentDescription="@string/cd_play_pause_button"
+            android:src="@drawable/ic_play_arrow" />
+
+        <ImageButton
+            android:id="@+id/button_next"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_next_button"
+            android:src="@drawable/ic_skip_next" />
+
+        <ImageButton
+            android:id="@+id/button_repeat"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_repeat_button"
+            android:src="@drawable/ic_repeat" />
+
+        <ImageButton
+            android:id="@+id/button_delete"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_delete_button"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/delete_red" />
+    </LinearLayout>
+
+    <!-- Seekbar Progress -->
+    <SeekBar
+        android:id="@+id/seekbar_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumbTint="?attr/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/layout_main_controls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_time"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/seekbar_progress"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_progress" />
+
+    <TextView
+        android:id="@+id/text_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_time"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/seekbar_progress"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_progress" />
+
+    <!-- Info Lagu di Atas -->
+    <ImageView
+        android:id="@+id/image_album_art"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/cd_album_art"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_music_note" />
+
+    <TextView
+        android:id="@+id/text_song_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/default_song_title"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_album_art"
+        app:layout_constraintTop_toTopOf="@id/image_album_art" />
+
+    <TextView
+        android:id="@+id/text_song_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/default_song_artist"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        app:layout_constraintEnd_toEndOf="@id/text_song_title"
+        app:layout_constraintStart_toStartOf="@id/text_song_title"
+        app:layout_constraintTop_toBottomOf="@id/text_song_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

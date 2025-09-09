@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MP3 Music Player</string>
+
+    <!-- Konten Deskripsi untuk UI -->
+    <string name="cd_album_art">Album Art</string>
+    <string name="cd_previous_button">Previous Song</string>
+    <string name="cd_play_pause_button">Play or Pause Song</string>
+    <string name="cd_next_button">Next Song</string>
+    <string name="cd_shuffle_button">Shuffle Playlist</string>
+    <string name="cd_repeat_button">Repeat Mode</string>
+    <string name="cd_delete_button">Delete Current Song</string>
+    <string name="cd_playlist_button">Show Playlist</string>
+
+    <!-- Teks Default -->
+    <string name="default_song_title">No Song Playing</string>
+    <string name="default_song_artist">Select a song to start</string>
+    <string name="default_time">00:00</string>
+
+    <!-- Status & Dialog -->
+    <string name="status_loading">Loading songs…</string>
+    <string name="status_no_songs">No songs found on this device.</string>
+    <string name="dialog_delete_title">Delete Song</string>
+    <string name="dialog_delete_message">Are you sure you want to permanently delete this file?\n\n\"%s\"</string>
+    <string name="dialog_button_delete">DELETE</string>
+    <string name="dialog_button_cancel">CANCEL</string>
+    <string name="toast_delete_success">Song deleted successfully.</string>
+    <string name="toast_delete_failed">Failed to delete song.</string>
+    <string name="permission_dialog_title">Permission Required</string>
+    <string name="permission_dialog_message">The app needs permission to read audio files from your storage to play music.</string>
+    <string name="permission_dialog_grant">GRANT</string>
+</resources>
