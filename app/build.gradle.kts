@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.mp3.musicplayer" // Pastikan ini sama dengan package name Anda
+    namespace = "com.ngluyo.deleteplayer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mp3.musicplayer" // Pastikan ini sama dengan package name Anda
+        applicationId = "com.ngluyo.deleteplayer"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -39,33 +39,33 @@ android {
 }
 
 dependencies {
-    // Pustaka Inti AndroidX
+    // Core AndroidX Libraries
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
 
-    // Pustaka untuk UI (User Interface)
-    implementation("com.google.android.material:material:1.11.0") // Komponen Material Design 3
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4") // Untuk layout yang kompleks
-    implementation("androidx.cardview:cardview:1.0.0") // Kartu dengan bayangan
-    implementation("androidx.recyclerview:recyclerview:1.3.2") // Untuk menampilkan daftar putar
+    // UI Libraries
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
-    // Pustaka untuk Siklus Hidup & Coroutines (untuk tugas background)
+    // Lifecycle & Coroutines
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    // Pustaka untuk Media (khusus untuk notifikasi media)
-    implementation("androidx.media:media:1.7.0")
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
-    // Pustaka untuk Pengujian (opsional, tapi praktik yang baik)
+    // Media Playback (ExoPlayer)
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-ui:1.3.1")
+    implementation("androidx.media3:media3-session:1.3.1")
+
+    // Local Broadcast
+    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
+
+    // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    // Untuk Navigasi Antar Fragment
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 }
