@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MP3MusicPlayer"
+rootProject.name = "DeletePlayer"
 include(":app")
  
